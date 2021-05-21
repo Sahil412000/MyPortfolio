@@ -8,8 +8,8 @@
 
 /*===== Colores =====*/
 :root{
-  --first-color: #4070F4;
-  --second-color: #0E2431;
+  --first-color: #27BBAD;
+  --second-color: #212f3d;
   
 }
 
@@ -57,7 +57,8 @@ body{
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  color: var(--second-color);
+  background-color: var(--second-color) ;
+  color: #fff;
 }
 h1,h2,p{
   margin: 0;
@@ -117,17 +118,19 @@ img{
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
+  background-color: var(--second-color);
   box-shadow: 0 1px 4px rgba(146,161,176,.15);
 }
 
 /*===== NAV =====*/
 .nav{
   height: var(--header-height);
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: var(--font-semi);
+  background-color: var(--first-colorr);
 }
 @media screen and (max-width: 768px){
   .nav__menu{
@@ -146,8 +149,14 @@ img{
 }
 .nav__link{
   position: relative;
-  color: #fff;
+  color: var(--first-color);
 }
+
+.nav__list li a{
+  color: var(--first-color);
+}
+
+
 .nav__link:hover{
   position: relative;
 }
@@ -160,9 +169,12 @@ img{
   top: 2rem;
   background-color: var(--first-color);
 }
-.nav__logo img{
-  height:50px;
-  width:50px;
+
+
+
+.nav__logo {
+  font-weight: 600;
+  font-size: var(--mb-4);
   color: var(--first-color);
 }
 .nav__toggle{
@@ -210,7 +222,7 @@ img{
   width: max-content;
   margin-bottom: var(--mb-2);
   font-size: 1.5rem;
-  color: var(--second-color);
+  color: var(--first-color);
 }
 .home__social-icon:hover{
   color: var(--first-color);
@@ -220,6 +232,13 @@ img{
   right: 0;
   bottom: 0;
   width: 295px;
+}
+
+.home__img img{
+  position: relative;
+  top: 2rem;
+  border-radius: .5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.38);
 }
 
 
@@ -278,7 +297,7 @@ img{
 .skills__icon{
   font-size: 2rem;
   margin-right: var(--mb-2);
-  color: var(--first-color);
+  color: var(--second-color);
 }
 
 .skills__names{
@@ -314,6 +333,7 @@ img{
 }
 
 /* ===== WORK =====*/
+
 .work__container{
   row-gap: 2rem;
 }
@@ -328,6 +348,46 @@ img{
 }
 .work__img img:hover{
   transform: scale(1.1);
+}
+
+.services-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.services-content .box {
+  padding: 40px 20px;
+  background: var(--second-color);
+  color: #fff;
+  max-width: 300px;
+  text-align: center;
+  border:2px solid var(--first-color);
+  border-radius: var(--mb-2);
+}
+/*.heading{
+  text-align: center;
+  color: var(--first-color);
+}*/
+.box img {
+  height: 45px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+.box h1 {
+  font-size: 1.3rem;
+}
+.box p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.services-content .box:hover {
+  transform: translateY(-10px);
+  background: var(--first-color);
+  transition: 0.5s;
 }
 
 /* ===== CONTACT =====*/
@@ -353,7 +413,7 @@ img{
 /* ===== FOOTER =====*/
 .footer{
   background-color: var(--second-color);
-  color: #fff;
+  color: var(--first-color);
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
@@ -367,7 +427,7 @@ img{
 }
 .footer__icon{
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--first-color);
   margin: 0 var(--mb-2)
 }
 
